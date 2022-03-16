@@ -21,20 +21,11 @@ namespace ClassTask.Models
         public static void CheckStatement(ref int GunbulletCapacity, ref int bulletCount, ref double bulletShootSecond, ref int chooseMode, ref bool autoMode)
         {
 
-            while (GunbulletCapacity <= 0 || GunbulletCapacity > 2000)
+            while (GunbulletCapacity <= 0)
             {
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.Write("Darağın maksimum tutumunu daxil edin: ");
                 GunbulletCapacity = Convert.ToInt16(Console.ReadLine());
-                if (GunbulletCapacity > 2000)
-                {
-                    while (GunbulletCapacity > 2000)
-                    {
-                        Console.ForegroundColor = ConsoleColor.Red;
-                        Console.Write("Daragda maksimum gulle sayini kecdiniz Maksimum 100 Gulle ola biler\nDaragdaki Gulle sayini yeniden daxil edin:");
-                        GunbulletCapacity = Convert.ToInt16(Console.ReadLine());
-                    }
-                }
                 while (GunbulletCapacity <= 0)
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
